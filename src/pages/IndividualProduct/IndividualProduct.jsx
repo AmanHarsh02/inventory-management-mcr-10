@@ -44,7 +44,7 @@ export function IndividualProduct() {
         <strong>Delivered:</strong> {delivered}
       </p>
       <p>
-        <strong>Description:</strong> ${description}
+        <strong>Description:</strong> {description}
       </p>
     </div>
   );
