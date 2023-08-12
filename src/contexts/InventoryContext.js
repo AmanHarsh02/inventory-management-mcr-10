@@ -17,7 +17,6 @@ export function InventoryProvider({ children }) {
 
   useEffect(() => {
     if (existingInventory) {
-      console.log(existingInventory);
       inventoryDispatch({ type: "SET_INVENTORY", payload: existingInventory });
     }
     if (existingFilters) {
@@ -112,6 +111,7 @@ export function InventoryProvider({ children }) {
     <InventoryContext.Provider
       value={{
         inventory: filteredInventory,
+        originalInventory: inventoryState.inventory,
         departments: inventoryState.departments,
         selectedDepartment: inventoryState.selectedDepartment,
         sortMethod: inventoryState.sortMethod,
